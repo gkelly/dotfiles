@@ -18,7 +18,7 @@ noticebar=/rbar/!notice
 export WMII_NORMCOLORS='#aaaaaa #263238 #37474f'
 export WMII_FOCUSCOLORS='#ffffff #455a64 #000000'
 
-export WMII_BACKGROUND='#546e7a'
+export WMII_BACKGROUND='#263238'
 export WMII_FONT='-*-fixed-medium-r-*-*-*-120-75-75-c-60-iso10646-*'
 
 set -- $(echo $WMII_NORMCOLORS $WMII_FOCUSCOLORS)
