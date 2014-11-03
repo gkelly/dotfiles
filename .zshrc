@@ -35,7 +35,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias ls="ls -F --color=auto"
 
-dotfiles=$(dirname `readlink -f $0`)
+dotfiles=$(dirname `readlink -f $HOME/.zshrc`)
 . $dotfiles/z/z.sh
 
 export TERM=screen-256color
