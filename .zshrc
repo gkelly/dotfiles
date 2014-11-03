@@ -35,16 +35,12 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias ls="ls -F --color=auto"
 
-dotfiles=$(dirname `readlink -f $HOME/.zshrc`)
-. $dotfiles/z/z.sh
-
 export TERM=screen-256color
 export PATH=~/.bin:~/go/bin:$PATH
 export GOPATH=~/go
 export EDITOR=vim
 
-# z3
-export PYTHONPATH=~/sandbox/z3-4.3.2.5a45711f22d9-x64-ubuntu-13.10/bin
+dotfiles=$(dirname `readlink -f $HOME/.zshrc`)
+. $dotfiles/z/z.sh
 
-# pin
-export PIN_ROOT=~/sandbox/pin-2.14-67254-gcc.4.4.7-linux
+. ${HOME}/.zshrc.local
