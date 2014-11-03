@@ -30,8 +30,7 @@ histnum=5000
 
 # Column Rules
 wmiir write /colrules <<!
-    /gimp/ -> 17+83+41
-    /.*/ -> 62+38 # Golden Ratio
+    /.*/ -> 50+50+33+43
 !
 
 # Tagging Rules
