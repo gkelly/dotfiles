@@ -35,6 +35,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias ls="ls -F --color=auto"
 
+dotfiles=$(dirname `readlink -f $0`)
+. $dotfiles/z/z.sh
+
 export TERM=screen-256color
 export PATH=~/.bin:~/go/bin:$PATH
 export GOPATH=~/go
