@@ -1,4 +1,8 @@
 execute pathogen#infect()
+filetype plugin indent on
+
+au FileType go nmap <LocalLeader>i :GoImports<CR>
+au FileType go nmap <LocalLeader>a <Plug>(go-import)
 
 set noswapfile
 set expandtab
