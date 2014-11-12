@@ -1,9 +1,4 @@
-filetype off
-filetype plugin indent off
-set runtimepath+=$HOME/sandbox/go/misc/vim
-filetype plugin indent on
-au BufWritePre *.go :silent Fmt
-syntax on
+execute pathogen#infect()
 
 set noswapfile
 set expandtab

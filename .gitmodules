@@ -4,3 +4,9 @@
 [submodule "z"]
 	path = z
 	url = https://github.com/rupa/z.git
+[submodule "vim-pathogen"]
+	path = vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim-go"]
+	path = vim-go
+	url = https://github.com/fatih/vim-go.git
