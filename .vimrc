@@ -30,8 +30,7 @@ map <Home> <NOP>
 
 map <LocalLeader>s {!}sort -d<CR>
 
-hi Comment ctermfg=darkgray
-
 set tags=./tags;
 
 syntax on
+hi Comment ctermfg=darkgray
