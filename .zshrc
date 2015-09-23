@@ -2,7 +2,7 @@ autoload -Uz promptinit
 promptinit
 prompt walters
 
-setopt histignorealldups sharehistory
+setopt histignorealldups sharehistory ignoreeof
 
 bindkey -e
 
