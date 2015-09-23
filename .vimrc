@@ -31,3 +31,6 @@ map <Home> <NOP>
 set tags=./tags;
 syntax on
 hi Comment ctermfg=darkgray
+
+" Always show status line.
+set laststatus=2
