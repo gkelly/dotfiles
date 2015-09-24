@@ -2,7 +2,10 @@ autoload -Uz promptinit
 promptinit
 prompt walters
 
-setopt histignorealldups sharehistory ignoreeof
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt ignore_eof
+setopt share_history
 
 bindkey -e
 
