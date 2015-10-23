@@ -9,6 +9,8 @@ setopt share_history
 
 bindkey -v
 bindkey '^r' history-incremental-search-backward
+bindkey '^u' backward-kill-line
+bindkey '^w' backward-kill-word
 
 autoload edit-command-line
 zle -N edit-command-line
