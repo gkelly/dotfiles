@@ -7,8 +7,14 @@ setopt hist_save_no_dups
 setopt ignore_eof
 setopt share_history
 
-bindkey -e
+bindkey -v
+bindkey '^r' history-incremental-search-backward
 
+autoload edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+KEYTIMEOUT=1
 HISTSIZE=10000
 SAVEHIST=250000
 HISTFILE=~/.zsh_history
