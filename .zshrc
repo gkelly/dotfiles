@@ -48,7 +48,7 @@ export GOPATH=~/go
 export EDITOR=vim
 
 heads() {
-  git for-each-ref --sort=-committerdate refs/heads/
+  git for-each-ref --sort=-authordate --format="%(refname:short)" refs/heads/
 }
 
 dotfiles=$(dirname `readlink -f $HOME/.zshrc`)
