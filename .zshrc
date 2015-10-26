@@ -8,6 +8,8 @@ setopt ignore_eof
 setopt share_history
 
 bindkey -v
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
 bindkey '^r' history-incremental-search-backward
 bindkey '^u' backward-kill-line
 bindkey '^w' backward-kill-word
