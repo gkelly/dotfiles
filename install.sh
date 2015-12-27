@@ -27,3 +27,5 @@ for i in $INSTALL; do
   echo "link $i"
   ln -s $where/$i $HOME/$i
 done
+
+touch ~/.zshrc.local
