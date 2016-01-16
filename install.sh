@@ -28,4 +28,4 @@ for i in $INSTALL; do
   ln -s $where/$i $HOME/$i
 done
 
-touch ~/.zshrc.local
+touch $HOME/.zshrc.local
