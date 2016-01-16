@@ -12,9 +12,9 @@ INSTALL='
 make_relative() {
   local from=$1
   local to=$2
-  python -c"
+  python3 -c"
 import os.path
-print os.path.relpath('$from', '$to')
+print(os.path.relpath('$from', '$to'))
 "
 }
 
