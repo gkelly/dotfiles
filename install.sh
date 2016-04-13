@@ -2,6 +2,7 @@
 
 INSTALL='
   .dircolors
+  .tmux.colors.conf
   .tmux.conf
   .vim
   .vimrc
