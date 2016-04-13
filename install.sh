@@ -29,3 +29,4 @@ for i in $INSTALL; do
 done
 
 touch $HOME/.zshrc.local
+touch $HOME/.vimrc.local
