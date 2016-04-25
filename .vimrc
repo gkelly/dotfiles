@@ -7,10 +7,10 @@ let g:go_fmt_fail_silently = 1
 au FileType go nmap <LocalLeader>i :GoImports<CR>
 au FileType go nmap <LocalLeader>a <Plug>(go-import)
 
-set noswapfile
 set expandtab
 set nobackup
 set nocompatible
+set noswapfile
 set nowrap
 set nowritebackup
 set ruler
