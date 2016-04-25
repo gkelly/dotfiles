@@ -8,6 +8,7 @@ au FileType go nmap <LocalLeader>i :GoImports<CR>
 au FileType go nmap <LocalLeader>a <Plug>(go-import)
 
 set expandtab
+set hidden
 set nobackup
 set nocompatible
 set noswapfile
