@@ -8,7 +8,7 @@
 	path = vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
 [submodule "vim-go"]
-	path = vim-go
+	path = .vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
 [submodule "tmux-colors-solarized"]
 	path = tmux-colors-solarized
