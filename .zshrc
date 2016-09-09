@@ -50,6 +50,8 @@ export PATH=~/.bin:~/go/bin:$PATH
 export GOPATH=~/go
 export EDITOR=vim
 
+tabs -2
+
 heads() {
   git for-each-ref --sort=-authordate --format="%(refname:short)" refs/heads/
 }
