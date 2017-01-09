@@ -37,3 +37,6 @@ hi Comment ctermfg=darkgray
 
 " Always show status line.
 set laststatus=2
+
+" Use the MRU file list from CtrlP instead of the default.
+map <Ctrl>+<Shift>+p :CtrlPMRUFiles<CR>
