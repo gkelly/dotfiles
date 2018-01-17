@@ -12,7 +12,7 @@ set hidden
 set nobackup
 set nocompatible
 set noswapfile
-set nowrap
+set wrap
 set nowritebackup
 set ruler
 set shiftwidth=2
