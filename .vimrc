@@ -37,3 +37,6 @@ hi Comment ctermfg=darkgray
 
 " Always show status line.
 set laststatus=2
+
+set background=dark
+color gruvbox
