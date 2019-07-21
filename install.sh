@@ -6,7 +6,6 @@ INSTALL='
   .tmux.conf
   .vim
   .vimrc
-  .wmii
   .zshrc
 '
 
