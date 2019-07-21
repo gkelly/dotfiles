@@ -7,6 +7,8 @@ let g:go_fmt_fail_silently = 1
 au FileType go nmap <LocalLeader>i :GoImports<CR>
 au FileType go nmap <LocalLeader>a <Plug>(go-import)
 
+let g:ctrlp_cmd = 'CtrlPMixed'
+
 set expandtab
 set hidden
 set nobackup
