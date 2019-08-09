@@ -19,12 +19,12 @@
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
-[submodule ".vim/bundle/gruvbox"]
-	path = .vim/bundle/gruvbox
-	url = https://github.com/morhetz/gruvbox.git
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule ".vim/bundle/vim-localvimrc"]
 	path = .vim/bundle/vim-localvimrc
 	url = https://github.com/embear/vim-localvimrc
+[submodule "vim-256noir"]
+	path = vim-256noir
+	url = https://github.com/andreasvc/vim-256noir

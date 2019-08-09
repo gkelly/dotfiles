@@ -39,5 +39,4 @@ syntax on
 " Always show status line.
 set laststatus=2
 
-set background=dark
-color gruvbox
+color 256_noir
