@@ -2,6 +2,7 @@
 
 INSTALL='
   .dircolors
+  .radare2rc
   .tmux.colors.conf
   .tmux.conf
   .vim
