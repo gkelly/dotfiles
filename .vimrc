@@ -1,18 +1,29 @@
 source ~/.vimrc.local
 
-execute pathogen#infect()
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vimwiki/vimwiki'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'michal-h21/vim-zettel'
+Plugin 'fatih/vim-go'
+Plugin 'vim-airline/vim-airline'
+call vundle#end()
 filetype plugin indent on
+
+nmap <C-P> :FZF<CR>
 
 let g:go_fmt_fail_silently = 1
 au FileType go nmap <LocalLeader>i :GoImports<CR>
 au FileType go nmap <LocalLeader>a <Plug>(go-import)
 
-let g:ctrlp_cmd = 'CtrlPMixed'
-
 set expandtab
 set hidden
 set nobackup
-set nocompatible
 set noswapfile
 set wrap
 set nowritebackup
