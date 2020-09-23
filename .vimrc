@@ -15,8 +15,13 @@ Plugin 'vim-airline/vim-airline'
 call vundle#end()
 filetype plugin indent on
 
+" fzf
 nmap <C-P> :FZF<CR>
 
+" vimwiki
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+
+" vim-go
 let g:go_fmt_fail_silently = 1
 au FileType go nmap <LocalLeader>i :GoImports<CR>
 au FileType go nmap <LocalLeader>a <Plug>(go-import)
