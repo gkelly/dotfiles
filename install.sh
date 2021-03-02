@@ -1,6 +1,7 @@
 #!/bin/bash
 
 INSTALL='
+  .alacritty.yml
   .dircolors
   .radare2rc
   .tmux.colors.conf
