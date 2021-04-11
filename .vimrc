@@ -12,6 +12,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'michal-h21/vim-zettel'
 Plugin 'fatih/vim-go'
 Plugin 'vim-airline/vim-airline'
+Plugin 'flazz/vim-colorschemes'
 call vundle#end()
 filetype plugin indent on
 
@@ -55,4 +56,4 @@ syntax on
 " Always show status line.
 set laststatus=2
 
-color 256_noir
+color charon
