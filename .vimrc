@@ -6,18 +6,19 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vimwiki/vimwiki'
+Plugin 'fatih/vim-go'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'michal-h21/vim-zettel'
-Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
-Plugin 'flazz/vim-colorschemes'
 call vundle#end()
 filetype plugin indent on
 
 " fzf
-nmap <C-P> :FZF<CR>
+nmap <C-p> :FZF<CR>
+nmap <C-o> :Rg<CR>
+nmap <C-B> :Buffers<CR>
 
 " vimwiki
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
@@ -25,7 +26,8 @@ let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 " vim-go
 let g:go_fmt_fail_silently = 1
 au FileType go nmap <LocalLeader>i :GoImports<CR>
-au FileType go nmap <LocalLeader>a <Plug>(go-import)
+au FileType go nmap <LocalLeader>g :GoDef<CR>
+au FileType go nmap <LocalLeader>G :GoDefPop<CR>
 
 set expandtab
 set hidden
