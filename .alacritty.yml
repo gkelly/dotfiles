@@ -1,8 +1,13 @@
+font:
+  normal:
+    family: RobotoMono Nerd Font
+    style: Regular
+
 # Based on ayu_dark
 colors:
   primary:
     background: '0x000000'
-    foreground: '0xcccccc'
+    foreground: '0xffffff'
 
   normal:
     black:   '0x01060E'
