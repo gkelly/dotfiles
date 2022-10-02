@@ -1,7 +1,10 @@
 #!/bin/bash
 
+mkdir -p ~/.config
+
 INSTALL='
   .alacritty.yml
+  .config/nvim
   .dircolors
   .radare2rc
   .tmux.colors.conf
@@ -27,7 +30,7 @@ for i in $INSTALL; do
     continue
   fi
   echo "link $i"
-  ln -s $where/$i $HOME/$i
+  ln -s $HOME/$where/$i $HOME/$i
 done
 
 touch $HOME/.zshrc.local
