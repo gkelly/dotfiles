@@ -1,16 +1,14 @@
 #!/bin/bash
 
-mkdir -p ~/.config
+mkdir -p ~/.config/helix
 
 INSTALL='
   .alacritty.yml
-  .config/nvim
+  .config/helix/config.toml
   .dircolors
   .radare2rc
   .tmux.colors.conf
   .tmux.conf
-  .vim
-  .vimrc
   .zshrc
 '
 
@@ -34,4 +32,3 @@ for i in $INSTALL; do
 done
 
 touch $HOME/.zshrc.local
-touch $HOME/.vimrc.local

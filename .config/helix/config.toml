@@ -1,0 +1,5 @@
+theme = "autumn"
+
+[editor]
+mouse = false
+true-color = true

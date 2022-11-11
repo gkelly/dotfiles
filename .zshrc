@@ -50,7 +50,7 @@ alias ls="ls -F --color=auto"
 export TERM=screen-256color
 export PATH=~/.bin:~/go/bin:$PATH
 export GOPATH=~/go
-export EDITOR=vim
+export EDITOR=hx
 
 heads() {
   git for-each-ref --sort=-authordate --format="%(refname:short)" refs/heads/

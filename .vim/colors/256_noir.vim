@@ -1,1 +1,0 @@
-../../vim-256noir/colors/256_noir.vim
