@@ -15,6 +15,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    tmux-colors-solarized = {
+      url = "github:seebi/tmux-colors-solarized";
+      flake = false;
+    };
+
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
 
@@ -32,9 +37,10 @@
         extraSpecialArgs = { inherit inputs; };
 
         modules = [
-          ./home.nix
           ./git.nix
           ./helix.nix
+          ./home.nix
+          ./tmux.nix
           ./zsh.nix
         ];
       };

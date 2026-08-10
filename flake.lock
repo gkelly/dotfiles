@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786077675,
-        "narHash": "sha256-PYwgIz1ySMppKqiwC1YImgekPx9g4Fo0yCYzRZ0Ft6w=",
+        "lastModified": 1786159714,
+        "narHash": "sha256-Rm3yXcjHmoebdRA35SVy/AM9PsckDPPJkY+xGodiIHQ=",
         "owner": "sadjow",
         "repo": "claude-code-nix",
-        "rev": "2464294b1d41bc2d49572f4cb569a3892c64d4ef",
+        "rev": "9bf9ac959eaee3b06d6ef13f18a711ae64a581b4",
         "type": "github"
       },
       "original": {
@@ -85,11 +85,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786031233,
-        "narHash": "sha256-TIDlLTLI1/pB7IqgjzcKQjpODQsZE2oII4XGG9B6KjI=",
+        "lastModified": 1786356609,
+        "narHash": "sha256-ou8fYz5w9yhXC8YbvvExybFIa19MyW5G/8dEPqa90hM=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "7834e82588860aaf780cec1366524456a70898d7",
+        "rev": "c30c7955cec30d664a9baced6bc0112e263d4647",
         "type": "github"
       },
       "original": {
@@ -100,11 +100,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1785747939,
-        "narHash": "sha256-D740uKsMbgsfK2oaDenJLLPIZfq7W0/g4KN/Fls8eKs=",
+        "lastModified": 1786098110,
+        "narHash": "sha256-shi1tjDhCGGd0kIgVPNY03V8NBWSTzhMSFDb7IqSoec=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "104240a772428cc2e20d8fd86c9ddbb886bbaff2",
+        "rev": "afb4584a80bbf779ce0f691509ff902d188c2b3d",
         "type": "github"
       },
       "original": {
@@ -119,7 +119,8 @@
         "claude-code-cli": "claude-code-cli",
         "codex-cli": "codex-cli",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "tmux-colors-solarized": "tmux-colors-solarized"
       }
     },
     "systems": {
@@ -149,6 +150,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tmux-colors-solarized": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1654814598,
+        "narHash": "sha256-M1z6tEIs5bI5sNMbuiv1boDD4WOLgCA21reGVJgkj4I=",
+        "owner": "seebi",
+        "repo": "tmux-colors-solarized",
+        "rev": "4d07f3cc1ce2bdc0c8391290c5b0cf098abddddc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "seebi",
+        "repo": "tmux-colors-solarized",
         "type": "github"
       }
     }

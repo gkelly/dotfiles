@@ -1,0 +1,56 @@
+{ inputs, ... }: {
+  programs.tmux = {
+    enable = true;
+    escapeTime = 0;
+    historyLimit = 10000;
+    keyMode = "vi";
+    prefix = "C-a";
+
+    extraConfig = ''
+      set-option -g renumber-windows on
+
+      unbind-key -a
+
+      bind-key ? list-keys
+
+      bind-key C-a send-prefix
+      bind-key C-d detach-client
+      bind-key : command-prompt
+
+      bind-key s choose-session
+      bind-key '$' command-prompt -p "name:" "rename-session '%%'"
+
+      bind-key % split-window -h
+      bind-key '"' split-window
+      bind-key l select-pane -R
+      bind-key h select-pane -L
+      bind-key j select-pane -D
+      bind-key k select-pane -U
+
+      bind-key c new-window
+      bind-key w choose-window
+      bind-key C-l next-window
+      bind-key C-h previous-window
+      bind-key 0 select-window -t :0
+      bind-key 1 select-window -t :1
+      bind-key 2 select-window -t :2
+      bind-key 3 select-window -t :3
+      bind-key 4 select-window -t :4
+      bind-key 5 select-window -t :5
+      bind-key 6 select-window -t :6
+      bind-key 7 select-window -t :7
+      bind-key 8 select-window -t :8
+      bind-key 9 select-window -t :9
+
+      bind-key [ copy-mode
+      bind-key ] paste-buffer
+      bind-key '#' list-buffers
+      bind-key - delete-buffer
+      bind-key PPage copy-mode -u
+
+      bind-key r refresh-client
+
+      source-file ${inputs.tmux-colors-solarized}/tmuxcolors-256.conf
+    '';
+  };
+}
