@@ -14,7 +14,6 @@
 
       bind-key ? list-keys
 
-      bind-key C-a send-prefix
       bind-key C-d detach-client
       bind-key : command-prompt
 
