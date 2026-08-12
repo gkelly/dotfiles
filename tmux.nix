@@ -5,6 +5,7 @@
     historyLimit = 10000;
     keyMode = "vi";
     prefix = "C-a";
+    terminal = "tmux-direct";
 
     extraConfig = ''
       set-option -g renumber-windows on
