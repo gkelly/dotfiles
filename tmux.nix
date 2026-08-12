@@ -8,17 +8,18 @@
     terminal = "tmux-direct";
 
     extraConfig = ''
-      set-option -g renumber-windows on
-
       unbind-key -a
 
       bind-key ? list-keys
 
+      bind-key C-a send-prefix
       bind-key C-d detach-client
       bind-key : command-prompt
 
       bind-key s choose-session
       bind-key '$' command-prompt -p "name:" "rename-session '%%'"
+
+      set-option -g renumber-windows on
 
       bind-key % split-window -h
       bind-key '"' split-window
@@ -46,7 +47,6 @@
       bind-key ] paste-buffer
       bind-key '#' list-buffers
       bind-key - delete-buffer
-      bind-key PPage copy-mode -u
 
       bind-key r refresh-client
 
