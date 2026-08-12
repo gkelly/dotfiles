@@ -26,23 +26,31 @@
   outputs =
     { nixpkgs, home-manager, ... }@inputs:
     let
-      system = "aarch64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      systems = [
+        "aarch64-linux"
+        "x86_64-linux"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+      homeConfiguration =
+        system:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+          extraSpecialArgs = { inherit inputs; };
+
+          modules = [
+            ./git.nix
+            ./helix.nix
+            ./home.nix
+            ./tmux.nix
+            ./zsh.nix
+          ];
+        };
     in
     {
-      formatter.${system} = pkgs.nixfmt;
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt);
 
-      homeConfigurations."gkelly" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
-
-        modules = [
-          ./git.nix
-          ./helix.nix
-          ./home.nix
-          ./tmux.nix
-          ./zsh.nix
-        ];
-      };
+      homeConfigurations = nixpkgs.lib.mapAttrs' (
+        system: configuration: nixpkgs.lib.nameValuePair "gkelly-${system}" configuration
+      ) (forAllSystems homeConfiguration);
     };
 }

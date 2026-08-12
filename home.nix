@@ -39,8 +39,8 @@
     ripgrep
     typst
 
-    inputs.claude-code-cli.packages.aarch64-linux.default
-    inputs.codex-cli.packages.aarch64-linux.default
+    inputs.claude-code-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.codex-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   home.sessionVariables = {
