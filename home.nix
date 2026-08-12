@@ -30,6 +30,7 @@
     age-plugin-yubikey
     eza
     fd
+    fzf
     gh
     git
     go
