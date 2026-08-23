@@ -24,10 +24,13 @@
   news.display = "silent";
   fonts.fontconfig.enable = true;
   programs.home-manager.enable = true;
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
 
   home.packages = with pkgs; [
     age
     age-plugin-yubikey
+    cachix
     eza
     fd
     fzf
@@ -35,10 +38,10 @@
     git
     go
     gopls
+    ripgrep
+
     nerd-fonts.jetbrains-mono
     nerd-fonts.roboto-mono
-    ripgrep
-    typst
 
     inputs.claude-code-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.codex-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
