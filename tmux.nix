@@ -20,6 +20,7 @@
       bind-key '$' command-prompt -p "name:" "rename-session '%%'"
 
       set-option -g renumber-windows on
+      set-option -g extended-keys on
 
       bind-key % split-window -h
       bind-key '"' split-window

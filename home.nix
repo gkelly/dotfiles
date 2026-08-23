@@ -5,6 +5,9 @@
   ...
 }:
 
+let
+  llm-agents = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
+in
 {
   home.username = "gkelly";
   home.homeDirectory = "/home/gkelly";
@@ -43,8 +46,10 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.roboto-mono
 
-    inputs.claude-code-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.codex-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
+    llm-agents.claude-code
+    llm-agents.codex
+    llm-agents.crush
+    llm-agents.pi
   ];
 
   home.sessionVariables = {
