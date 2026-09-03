@@ -9,6 +9,13 @@ let
   llm-agents = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
 in
 {
+  imports = [
+    ./git.nix
+    ./helix.nix
+    ./tmux.nix
+    ./zsh.nix
+  ];
+
   home.username = "gkelly";
   home.homeDirectory = "/home/gkelly";
 

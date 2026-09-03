@@ -5,7 +5,10 @@
   };
 
   inputs = {
-    llm-agents.url = "github:numtide/llm-agents.nix";
+    llm-agents = {
+      url = "github:numtide/llm-agents.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -23,31 +26,26 @@
   outputs =
     { nixpkgs, home-manager, ... }@inputs:
     let
+      inherit (nixpkgs) lib;
       systems = [
         "aarch64-linux"
         "x86_64-linux"
       ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
+      pkgsFor = system: nixpkgs.legacyPackages.${system};
+      forAllSystems = f: lib.genAttrs systems (system: f (pkgsFor system));
       homeConfiguration =
-        system:
+        pkgs:
         home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
+          inherit pkgs;
           extraSpecialArgs = { inherit inputs; };
-
-          modules = [
-            ./git.nix
-            ./helix.nix
-            ./home.nix
-            ./tmux.nix
-            ./zsh.nix
-          ];
+          modules = [ ./home.nix ];
         };
     in
     {
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt);
+      formatter = forAllSystems (pkgs: pkgs.nixfmt);
 
-      homeConfigurations = nixpkgs.lib.mapAttrs' (
-        system: configuration: nixpkgs.lib.nameValuePair "gkelly-${system}" configuration
-      ) (forAllSystems homeConfiguration);
+      homeConfigurations = lib.listToAttrs (
+        map (system: lib.nameValuePair "gkelly-${system}" (homeConfiguration (pkgsFor system))) systems
+      );
     };
 }
