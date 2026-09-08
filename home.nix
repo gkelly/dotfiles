@@ -12,6 +12,7 @@ in
   imports = [
     ./git.nix
     ./helix.nix
+    ./rust.nix
     ./tmux.nix
     ./zsh.nix
   ];
