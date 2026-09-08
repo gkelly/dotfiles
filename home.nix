@@ -49,7 +49,6 @@ in
     fd
     fzf
     gh
-    git
     go
     gopls
     ripgrep
