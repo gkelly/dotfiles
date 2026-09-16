@@ -62,11 +62,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788651960,
-        "narHash": "sha256-v9wJd32eZ2bvhBzVOd7TIjLQd011P7nwOhjKtWlci5I=",
+        "lastModified": 1789482455,
+        "narHash": "sha256-pD3qVlQ4mUCFoTWrYtxecpSitQMsgJvJIN0FUIDZoEU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "2c0350c759688177331b8f5242311fae8877bdb3",
+        "rev": "efa3ccb4c3cc90d832eab232976379058fa75aa3",
         "type": "github"
       },
       "original": {
@@ -79,18 +79,16 @@
       "inputs": {
         "bun2nix": "bun2nix",
         "flake-parts": "flake-parts",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
+        "nixpkgs": "nixpkgs",
         "systems": "systems",
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1788858717,
-        "narHash": "sha256-lNh6z7qJ35S8msz4kH3xNxXTN7PLENpesL5LatpNBGA=",
+        "lastModified": 1789517885,
+        "narHash": "sha256-9lz0kGD+9cO0r7/7Y7yyQNMZ6dRpb3K391saGAYZ13w=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "30e001e67438ab6ba024fa8d4f2e9be0ba7548af",
+        "rev": "f958614cf5e77a275098805806975930c60b2ade",
         "type": "github"
       },
       "original": {
@@ -101,11 +99,27 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1788834054,
-        "narHash": "sha256-9dzTcXMtlknZyT47Vv1PnpGgN7UYA8WxxqyxsKdvYbo=",
+        "lastModified": 1789073787,
+        "narHash": "sha256-xfX/toC2QV707s06GbP4II/TxYF0fNQj7s5/LClNDKc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "aff8a0b28396750446e5537a96461bc4facdb287",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1789370336,
+        "narHash": "sha256-6RSEDHIWQtesQKWSu5qRai8L2h4KgCgMEfJHstW99G4=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e9b9cbecbf6c25ca26c150d78570e6332694a129",
+        "rev": "c7def046b9a883d46974757852106483d741586f",
         "type": "github"
       },
       "original": {
@@ -119,7 +133,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "llm-agents": "llm-agents",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "tmux-colors-solarized": "tmux-colors-solarized"
       }
     },
