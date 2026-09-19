@@ -19,6 +19,8 @@ in
 
   home.username = "gkelly";
   home.homeDirectory = "/home/gkelly";
+  news.display = "silent";
+  targets.genericLinux.enable = true;
 
   xdg.userDirs = {
     enable = true;
@@ -32,11 +34,12 @@ in
     videos = config.home.homeDirectory;
   };
 
-  news.display = "silent";
-  fonts.fontconfig.enable = true;
   programs.home-manager.enable = true;
-  programs.direnv.enable = true;
-  programs.direnv.nix-direnv.enable = true;
+
+  programs.alacritty = {
+    enable = true;
+    settings.selection.save_to_clipboard = true;
+  };
 
   home.packages = with pkgs; [
     age
@@ -50,9 +53,6 @@ in
     go
     gopls
     ripgrep
-
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.roboto-mono
 
     llm-agents.claude-code
     llm-agents.codex
