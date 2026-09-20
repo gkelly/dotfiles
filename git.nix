@@ -3,9 +3,13 @@
 {
   programs.git = {
     enable = true;
-    settings.user = {
-      name = "Garret Kelly";
-      email = "gkelly@gkel.ly";
+    settings = {
+      user = {
+        name = "Garret Kelly";
+        email = "gkelly@gkel.ly";
+      };
+      init.defaultBranch = "main";
+      pull.rebase = true;
     };
   };
 }
