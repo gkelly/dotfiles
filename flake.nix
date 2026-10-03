@@ -43,6 +43,10 @@
     {
       formatter = forAllSystems (pkgs: pkgs.nixfmt);
 
+      packages = forAllSystems (pkgs: {
+        install-nix-bwrap-apparmor = import ./install-nix-bwrap-apparmor.nix { inherit pkgs; };
+      });
+
       homeConfigurations = lib.listToAttrs (
         map (system: lib.nameValuePair "gkelly-${system}" (homeConfiguration (pkgsFor system))) systems
       );
