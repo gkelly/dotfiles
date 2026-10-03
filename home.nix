@@ -42,7 +42,6 @@ in
   };
 
   home.packages = with pkgs; [
-    (import ./install-nix-bwrap-apparmor.nix { inherit pkgs; })
     age
     age-plugin-yubikey
     cachix
